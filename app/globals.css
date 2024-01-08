@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* @font-face {
+  font-family: 'BROmny';
+  src: url('/public/fonts/bromny/BROmnyRegular.ttf') format('ttf'),
+       url('/public/fonts/bromny/BROmnyBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+
+:root {
+  font-family: 'BROmny-Regular', sans-serif;
+}
+/* Import the font */
+@import url('https://fonts.cdnfonts.com/css/bromny-black');
+
+/* Set the font for the body */
+body {
+  font-family: 'BROmny-Regular', sans-serif;
+}
+
+/* ... rest of your global.css */
+
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+  position: relative;
+  z-index: 1;  /* or any other value that makes sense in your layout */
+
+}
