@@ -3,13 +3,13 @@
 
 const MainFeatures = () => {
   return (
-    <section className="w-full py-16 md:py-24 bg-[#21989E]" >
+    <div className="w-full py-16 md:py-24 bg-[#21989E] h-full" >
         {/* <div className="bg-black" id="badoo" style={{ transform: 'rotate(17deg) skew(17deg)' }}></div> */}
 
         
       {/* First Row: Title */}
-      <div className="w-full mb-16 md:mb-24">
-      <h2 className="text- lg:text-[50px] lg:leading-[50px]  font-semibold text-center font-BROmny">Savewyze key features<br/>made just for you!</h2>
+      <div className="w-full mb-16 lg:pt-[180px] md:mb-24">
+      <h2 className="text-3xl lg:text-[50px] lg:leading-[50px]  font-semibold text-center font-BROmny">Savewyze key features<br/>made just for you!</h2>
       </div>
 
       
@@ -99,12 +99,45 @@ const MainFeatures = () => {
                 </div>
             </div>
         </div>
-
-       
-  
      
       </div>
-    </section>
+
+       {/* Absolute Images */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+        
+        {/* Top Left Image */}
+        <img 
+            src="/image/top-left-features.svg" 
+            alt="Top Left Pattern" 
+            className="absolute top-0 left-0  object-cover"
+        />
+        
+        {/* Top Right Image */}
+        <img 
+            src="/image/bottom-right-features.svg" 
+            alt="Top Right Image" 
+            className="absolute top-0 right-0 object-cover"
+        />
+        
+        {/* Bottom Center Image */}
+        <img 
+            src="/image/naira-button-green.svg" 
+            alt="Bottom Center Image" 
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 object-cover"
+        />
+
+        <div className="absolute top-0 left-0 transform  object-cover bg-[#1A7A7F] h-[100px] w-[40%] rounded-[84px] rotate-[1deg]"></div>
+    
+
+         {/* Top Center Image */}
+         <img 
+            src="/image/pounds-circle.svg" 
+            alt="Bottom Center Image" 
+            className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 object-cover"
+        />
+
+    </div>
+    </div>
   );
 };
 

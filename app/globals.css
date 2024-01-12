@@ -33,7 +33,19 @@
 
 /* Set the font for the body */
 body {
+  font-family: 'BROmny-Black', sans-serif;
+  font-family: 'BROmny-Bold', sans-serif;
+  font-family: 'BROmny-Light', sans-serif;
+  font-family: 'BROmny-Medium', sans-serif;
   font-family: 'BROmny-Regular', sans-serif;
+  /* font-family: 'BROmny-Thin', sans-serif;
+  font-family: 'BROmny-BlackItalic', sans-serif;
+  font-family: 'BROmny-BoldItalic', sans-serif;
+  font-family: 'BROmny-LightItalic', sans-serif;
+  font-family: 'BROmny-MediumItalic', sans-serif;
+  font-family: 'BROmny-RegularItalic', sans-serif;
+  font-family: 'BROmny-ThinItalic', sans-serif; */
+
 }
 
 /* ... rest of your global.css */

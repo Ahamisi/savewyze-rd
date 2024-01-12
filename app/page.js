@@ -14,18 +14,18 @@ export default function Home() {
       {/* Header */}
      
       
-      <section className="relative w-full h-[600px] md:h-[800px] bg-cover bg-center" style={{ backgroundImage: "url('/image/landpage-image.jpg')" }}>
+      <section className="relative w-full h-[600px] md:h-[800px] bg-cover bg-center" style={{ backgroundImage: "url('/image/frame-pattern.svg')" }}>
     <div>
         <Header />
     </div>
     {/* Container */}
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex ">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8  h-auto md:h-[780px] flex pt-8 flex-col md:flex-row">
         {/* Content Wrapper */}
-        <div className="md:w-full md:w-7/10">
-            {/* Add your content here */}
+        <div className=" md:w-[40%] lg:w-[40%] xl:w-[53%] h-full order-2	lg:order-1">
+          <img src="/image/savewyze-user.png" alt="Savewyze User" className="md:mt-[40px]"/>
         </div>
-        <div className="w-full md:w-3/10 relative flex items-center">
-            <div className='md:absolute md:px-10 left-[20%] flex flex-col space-y-[25px] lg:mt-[-160px]'>
+        <div className=" md:w-full lg:w-[60%] xl:w-[47%] relative flex justify-start md:items-center order-1	lg:order-2">
+            <div className='md:absolute lg:px-10 lg:left-[5%] flex flex-col space-y-[25px] md:mt-[-160px]'>
                 {/* Headers and Paragraph */}
                 <h1 className="text-4xl md:text-5xl font-semibold text-[#F2E6F9] mb-4">Achieve Financial Freedom with <span className='text-[#D8B2EC]'>Savewyze!</span></h1>
                 <p className="text-lg md:text-xl text-[#F2E6F9] mb-6">Save. Earn. Grow.</p>
@@ -40,7 +40,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className="absolute right-0 bottom-0 ml-auto w-[70%] transform skew-y-[16.5deg] rounded-l-[84px] bg-[#D8B2EC] h-[170px]"></div>
+            <div className="hidden lg:flex absolute right-0 bottom-0 ml-auto w-[70%] transform skew-y-[16.5deg] rounded-l-[84px] bg-[#D8B2EC] h-[160px]"></div>
         </div>
     </div>
         {/* Background Overlay with Skew */}
@@ -57,24 +57,27 @@ export default function Home() {
 </section>
 
 
-<section className="w-full overflow-x-hidden relative py-[120px] bg-[#21989E]">
-
+<section className="w-full overflow-x-hidden relative bg-[#21989E] h-full overflow-hidden">
     <MainFeatures/>
 </section>
 
-<section className="w-full overflow-x-hidden bg-[#F9F9F9] relative">
-<div className="h-[10%] bg-[#21989E] absolute top-0 w-full"></div>
-
+<section className="w-full overflow-x-hidden bg-[#fff] relative">
+    <div className="h-[10%] bg-[#21989E] absolute top-0 w-full"></div>
     <GetStartedSteps/>
 </section>
 
 
-      <section className="w-full overflow-x-hidden bg-[#F9F9F9]">
+      <section className="w-full overflow-x-hidden bg-[#fff]">
         <SavingPlans/>
       </section>
 
-      <section className="w-full overflow-x-hidden bg-[#F9F9F9]" style={{ backgroundImage: "url('/image/group-skey.svg')" }}>
+      <section className="w-full overflow-x-hidden bg-[#4D0374] bg-contain bg-no-repeat bg-top relative h-[100%] overflow-hidden" style={{ backgroundImage: "url('/image/savewyze-super-bg.jpg')",}}>
+        {/* <div className="bg-[#fff] h-[100px]"></div> */}
         <TestimonialSection/>
+
+            {/* Background color to fill the remaining area */}
+        {/* <div className="absolute inset-0 bg-[#F9F9F9] bottom-0 pointer-events-none"></div> */}
+
       </section>
 
         <section className="bg-[#4D0374]">

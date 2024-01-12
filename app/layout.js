@@ -9,7 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link href="https://fonts.cdnfonts.com/css/bromny-black" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/bromny-black" rel="stylesheet"/>
+                
       <body>{children}</body>
     </html>
   )
