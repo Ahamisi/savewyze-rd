@@ -32,10 +32,10 @@ export default function WyzeLock() {
             <div className='md:absolute md:px-0 left-0 flex flex-col space-y-[25px]'>
                 {/* Headers and Paragraph */}
                <div className="lg:w-[70%] lg:mr-auto lg:ml-6 flex flex-col space-y-[25px]">
-                    <h1 className="text-4xl md:text-5xl font-semibold text-[#121212] mb-0">Wyze Lock</h1>
-                    <p className="text-lg md:text-xl text-[#121212] mb-6">Lock money away for a set period with no access to it till maturity. Earn up to 20% interest p.a.</p>  
+                    <h1 className="text-4xl md:text-5xl font-semibold text-[#121212] mb-0">Wyze Vault</h1>
+                    <p className="text-lg md:text-xl text-[#121212] mb-6">Flexible savings that allows free transfers and withdrawals.</p>  
                     <div>
-                        <button className="bg-[#8005C2] text-white rounded-[36px] py-[20px] px-[40px] hover:bg-[#4D0374] hover:text-white transition duration-300">Get Started</button>
+                        <button className="bg-[#8005C2] text-white font-light rounded-[36px] py-[20px] px-[40px] hover:bg-[#4D0374] hover:text-white transition duration-300">Get Started</button>
                     </div>
                </div>
             
@@ -74,7 +74,7 @@ export default function WyzeLock() {
 <section className="relative bg-[#F2E6F9] py-[130px]">
     <div className="w-full lg:max-w-[70%] mx-auto relative">
     <header className="text-center mb-10">
-        <h2 className="text-3xl text-[#121212] lg:text-[50px] lg:leading-[50px]">Start your journey to <br/> financial freedom</h2>
+        <h2 className="text-3xl text-[#121212] lg:text-[50px] lg:leading-[50px]">Save up for your goals</h2>
     </header>
 
    <div className="flex gap-[50px] flex-col mx-auto">
@@ -93,9 +93,9 @@ export default function WyzeLock() {
                 {/* Top Layer */}
                 <div className="relative z-20 flex flex-col items-left justify-between w-[358px] h-full rounded-[32px] bg-white py-[30px]">
                     <div className="px-[55px] flex flex-col text-[#121212] gap-[31px]">
-                        <img src="/image/savings-goal.svg" alt="Icon 1" className="h-[156px] w-[156px]" />
-                        <h3 className="text-3xl font-bolder font-[800]">Goal-Oriented savings</h3>
-                        <p>Manage the funds you want to grow by setting them aside for a fixed period without having access to it until maturity.</p>
+                        <img src="/image/automated-savings.svg" alt="Icon 1" className="h-[156px] w-[156px]" />
+                        <h3 className="text-2xl font-bolder font-[800]">Automated savings</h3>
+                        <p className="font-extralight">Just start saving without thinking about it. Automate your savings for daily or weekly deductions. N1000 per day is not too small.</p>
                     </div>
                     
                     
@@ -116,9 +116,9 @@ export default function WyzeLock() {
                 {/* Top Layer */}
                 <div className="relative z-20 flex flex-col items-left justify-between w-[358px] h-full rounded-[32px] bg-white py-[30px]">
                     <div className="px-[55px] flex flex-col text-[#121212] gap-[31px]">
-                        <img src="/image/savings-tenure.svg" alt="Savings Choose your tenure" className="h-[156px] w-[156px]" />
-                        <h3 className="text-3xl font-bolder font-[800]">Choose your tenure</h3>
-                        <p>You’re in control. Choose from as little as 90 days to 1000 days to lock away your savings.</p>
+                        <img src="/image/save-wish.svg" alt="Savings Choose your tenure" className="h-[156px] w-[156px]" />
+                        <h3 className="text-2xl font-bolder font-[800]">Save as you wish</h3>
+                        <p className="font-light">You can manually add any amount to your WyzeVault whenever you feel like it or as an addition to your daily automated savings.</p>
                     </div>
                     
                     
@@ -138,9 +138,9 @@ export default function WyzeLock() {
                 {/* Top Layer */}
                 <div className="relative z-20 flex flex-col items-left justify-between w-[358px] h-full rounded-[32px] bg-white py-[30px]">
                     <div className="px-[55px] flex flex-col text-[#121212] gap-[31px]">
-                        <img src="/image/savings-lock.svg" alt="Saving Lock" className="h-[156px] w-[156px]" />
-                        <h3 className="text-3xl font-bolder font-[800]">Create multiple Lock Profiles</h3>
-                        <p>You can segment how you lock away your funds with different tenures on each segment.</p>
+                        <img src="/image/savings-habit-vault.svg" alt="Saving Target" className="h-[156px] w-[156px]" />
+                        <h3 className="text-2xl font-bolder font-[800]">Develop a Savings habit</h3>
+                        <p className="font-light">Reach your savings objectives sooner as you will be fined for withdrawals that are arbitrary (withdrawals outside your determined withdrawal dates)</p>
                     </div>
                     
                     
@@ -161,9 +161,9 @@ export default function WyzeLock() {
                 {/* Top Layer */}
                 <div className="relative z-20 flex flex-col items-left justify-between w-[358px] h-full rounded-[32px] bg-white py-[30px]">
                     <div className="px-[55px] flex flex-col text-[#121212] gap-[31px]">
-                        <img src="/image/savings-earnings.svg" alt="Savings Earnings" className="h-[156px] w-[156px]" />
-                        <h3 className="text-3xl font-bolder font-[800]">Earn up to 20% interest p.a.</h3>
-                        <p>You can earn up to 20% interest per annum on Savewyze. No other fintech platform in Africa can earn you such returns.</p>
+                        <img src="/image/daily-interest-vault.svg" alt="Savings Earnings" className="h-[156px] w-[156px]" />
+                        <h3 className="text-2xl font-bolder font-[800]">Earn daily interest</h3>
+                        <p>You earn interest daily and you can earn up to 10% interest per annum with WyzeVault.</p>
                     </div>
                     
                     

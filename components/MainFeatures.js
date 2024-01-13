@@ -3,7 +3,7 @@
 
 const MainFeatures = () => {
   return (
-    <div className="w-full py-16 md:py-24 bg-[#21989E] h-full" >
+    <div className="w-full py-16 md:py-24 bg-[#21989E] h-full lg:mt-[100px]" >
         {/* <div className="bg-black" id="badoo" style={{ transform: 'rotate(17deg) skew(17deg)' }}></div> */}
 
         

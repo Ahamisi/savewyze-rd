@@ -24,8 +24,8 @@ const Footer = () => {
             <div className="w-1/2 md:w-1/4 lg:w-1/6 mb-8 md:mb-0 pr-8">
                 <h5 className="text-lg font-semibold mb-[23px]">Features</h5>
                 <ul className="space-y-[24px]">
-                    <li><Link href="/saving-plans/wyze-lock" className="text-[#121212] hover:text-[#8005C2]">Wyze Vault</Link></li>
-                    <li><Link href="/saving-plans/wyze-lock" className="text-[#121212] hover:text-[#8005C2]">Wyze Target</Link></li>
+                    <li><Link href="/saving-plans/wyze-vault" className="text-[#121212] hover:text-[#8005C2]">Wyze Vault</Link></li>
+                    <li><Link href="/saving-plans/wyze-target" className="text-[#121212] hover:text-[#8005C2]">Wyze Target</Link></li>
                     <li><Link href="/saving-plans/wyze-lock" className="text-[#121212] hover:text-[#8005C2]">Wyze Lock</Link></li>
 
                     {/* Add more sublinks as needed */}
@@ -58,7 +58,7 @@ const Footer = () => {
                 <h5 className="text-lg font-semibold mb-[23px]">Get in Touch</h5>
                 <ul className="space-y-[24px]">
                     <li><Link href="#" className="text-[#121212] hover:text-[#8005C2] lg:leading-[30px]">enquiries@savewyze.com</Link></li>
-                    <li><Link href="#" className="text-[#121212] hover:text-[#8005C2]  lg:leading-[30px]">08072771110</Link></li>
+                    <li><Link href="#" className="text-[#121212] hover:text-[#8005C2]  lg:leading-[30px]">09169856898</Link></li>
                     <li className="flex items-center space-x-4">
                         <Link href="#" className="text-[#121212] hover:text-[#8005C2]">
                             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">

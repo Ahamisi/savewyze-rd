@@ -37,7 +37,7 @@ body {
   font-family: 'BROmny-Bold', sans-serif;
   font-family: 'BROmny-Light', sans-serif;
   font-family: 'BROmny-Medium', sans-serif;
-  font-family: 'BROmny-Regular', sans-serif;
+  /* font-family: 'BROmny-Regular', sans-serif; */
   /* font-family: 'BROmny-Thin', sans-serif;
   font-family: 'BROmny-BlackItalic', sans-serif;
   font-family: 'BROmny-BoldItalic', sans-serif;
@@ -58,4 +58,8 @@ body {
   position: relative;
   z-index: 1;  /* or any other value that makes sense in your layout */
 
+}
+html{
+  overflow-x: hidden !important;
+  width: 100%;
 }

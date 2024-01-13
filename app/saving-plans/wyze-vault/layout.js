@@ -3,7 +3,7 @@ import '../../../app/globals.css'
 
 
 export const metadata = {
-  title: 'Wyze Lock',
+  title: 'Wyze Vault',
   description: 'Achieve Financial Freedom with Savewyze!',
 }
 
