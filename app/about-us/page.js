@@ -1,140 +1,201 @@
 "use client"
-import Image from 'next/image'
-import Header from '@/components/Header'
-import FeatureSection from '@/components/FeatureSection'
-import MainFeatures from '@/components/MainFeatures'
-import GetStartedSteps from '@/components/GetStartedSteps'
-import SavingPlans from '@/components/SavingPlans'
-import TestimonialSection from '@/components/TestimonialSection'
-import SubFooter from '@/components/SubFooter'
-import Footer from '@/components/Footer'
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
+import Header from '@/components/Header';
+import SubFooter from '@/components/SubFooter';
+import Footer from '@/components/Footer';
 
 export default function AboutUs() {
+  const controls = useAnimation();
+
+  // Header Animation
+  const [headerRef, headerInView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (headerInView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: -50 });
+    }
+  }, [headerInView, controls]);
+
+  // Section 1 Animation
+  const [section1Ref, section1InView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (section1InView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [section1InView, controls]);
+
+  // Section 2 Animation
+  const [section2Ref, section2InView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (section2InView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [section2InView, controls]);
+
+  // Add more sections using the same pattern
+
   return (
     <main className="min-h-screen bg-[#4D0374]">
       {/* Header */}
-    <div>
+      <motion.div
+        ref={headerRef}
+        animate={controls}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.8 }}
+      >
         <Header mode="light" />
-    </div>
-      
-      <section className="relative w-full h-[600px] md:h-[800px] bg-cover bg-center" style={{ backgroundImage: "url('/image/pages/about-us.jpg')" }}>
+      </motion.div>
 
-    {/* Container */}
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex " >
-        {/* Content Wrapper */}
-    
-        <div className="w-full md:w-5/10 relative flex items-center">
-            <div className='md:absolute md:px-0 left-0 flex flex-col space-y-[25px] lg:mt-[-160px]'>
-                {/* Headers and Paragraph */}
-                <h1 className="text-4xl md:text-5xl font-semibold text-[#121212] mb-0">Empowering Africans for financial freedom!</h1>
-                <p className="text-lg md:text-xl text-[#121212] mb-6">We are providing financial services to Africa's expanding population to help them fulfill their dreams.</p>              
-            </div>
-        </div>
-
-        <div className="md:w-full md:w-5/10">
-            <div className="absolute right-0 bottom-0 ml-auto  w-[40%] transform skew-y-[16.5deg] rounded-l-[84px] bg-[#D8B2EC] h-[170px]"></div>
-
-            {/* Add your content here */}
-        </div>
-    </div>
-        {/* Background Overlay with Skew */}
-        <div className="relative left-0 w-full transform skew-y-6 rounded-tl-[84px] h-[600px] lg:h-[100%] z-20 mt-[-90px] lg:mt-[-170px]  bg-[#2D0244]"></div>
-
-</section>
-
-<section className="w-full overflow-x-hidden bg-[#2D0244] skewed-wrapper relative overflow-hidden z-30 pb-[80px]">
-
-    {/* Content */}
-    <div className="relative">
-      {/* Staff Members Section */}
-          <div className="container mx-auto p-4 lg:w-[80%]">
-              {/* Title */}
-              <h2 className="text-center text-3xl mb-8 lg:text-[50px] lg:leading-[50px]">Developed in the heart of Africa, <br/> for endless possibilities.</h2>
-
-              {/* Staff Members */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-[24px] bg-[#4D0374] rounded-[54px] p-4 md:p-[48px]">
-                  {/* Staff Member 1 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/sadiq-isu.png" alt="Sadiq Isu" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Sadiq Isu</h3>
-                          <p className="">Founder</p>
-                      </div>
-                  </div>
-
-                  {/* Staff Member 2 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/abdul-isu.png" alt="Abdul Isu" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Abdul Isu</h3>
-                          <p className="">Co-Founder</p>
-                      </div>
-                  </div>
-
-                  {/* Staff Member 3 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/michael-nwoseh.png" alt="Michael Nwoseh" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Michael Nwoseh</h3>
-                          <p className="">Business Director</p>
-                      </div>
-                  </div>
-
-                  {/* Staff Member 4 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/thompson-opurum.png" alt="Thompson Opurum" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Procurement Manager</h3>
-                          <p className="">Co-Founder</p>
-                      </div>
-                  </div>
-
-
-                  {/* Staff Member 1 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/gina-isu.png" alt="Gina Isu" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Gina Isu</h3>
-                          <p className="">Director of Marketing</p>
-                      </div>
-                  </div>
-
-                  {/* Staff Member 2 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/samuel-akingbade.png" alt="Samuel Akingbade" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Samuel Akingbade</h3>
-                          <p className="">Head of Marketing</p>
-                      </div>
-                  </div>
-
+      {/* Section 1 */}
+      <div ref={section1Ref}>
+        <motion.section
+          className="relative w-full h-[600px] md:h-[800px] bg-cover bg-center"
+          style={{ backgroundImage: "url('/image/pages/about-us.jpg')" }}
+          animate={controls}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+        >
+          
+                {/* Container */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex " >
+                    {/* Content Wrapper */}
                 
+                    <div className="w-full md:w-5/10 relative flex items-center">
+                        <div className='md:absolute md:px-0 left-0 flex flex-col space-y-[25px] lg:mt-[-160px]'>
+                            {/* Headers and Paragraph */}
+                            <h1 className="text-4xl md:text-5xl font-semibold text-[#121212] mb-0">Empowering Africans for financial freedom!</h1>
+                            <p className="text-lg md:text-xl text-[#121212] mb-6">We are providing financial services to Africa's expanding population to help them fulfill their dreams.</p>              
+                        </div>
+                    </div>
 
-                  {/* Staff Member 3 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/haolat-ogbomo.png" alt="Haolat Ogbomo" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Haolat Ogbomo</h3>
-                          <p className="">Human Resource</p>
-                      </div>
-                  </div>
+                    <div className="md:w-full md:w-5/10">
+                        <div className="absolute right-0 bottom-0 ml-auto  w-[40%] transform skew-y-[16.5deg] rounded-l-[84px] bg-[#D8B2EC] h-[170px]"></div>
 
-                  {/* Staff Member 4 */}
-                  <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
-                      <img src="/image/pages/staff/akwaowo-willie.png" alt="Akwaowo Willie" className="w-24 h-24 rounded-full "/>
-                      <div className="details text-[#333]">
-                          <h3 className="text-lg font-semibold mb-2">Akwaowo Willie</h3>
-                          <p className="">Logistics</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+                        {/* Add your content here */}
+                    </div>
+                </div>
+                    {/* Background Overlay with Skew */}
+                    <div className="relative left-0 w-full transform skew-y-6 rounded-tl-[84px] h-[600px] lg:h-[100%] z-20 mt-[-90px] lg:mt-[-170px]  bg-[#2D0244]"></div>
 
-    </div>
-</section>
+        </motion.section>
+      </div>
+
+      {/* Section 2 */}
+      <div ref={section2Ref}>
+        <motion.section
+          className="w-full overflow-x-hidden bg-[#2D0244] skewed-wrapper relative overflow-hidden z-30 pb-[80px]"
+          animate={controls}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+        >
+              {/* Content */}
+                <div className="relative">
+                {/* Staff Members Section */}
+                    <div className="container mx-auto p-4 lg:w-[80%]">
+                        {/* Title */}
+                        <h2 className="text-center text-3xl mb-8 lg:text-[50px] lg:leading-[50px]">Developed in the heart of Africa, <br/> for endless possibilities.</h2>
+
+                        {/* Staff Members */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-[24px] bg-[#4D0374] rounded-[54px] p-4 md:p-[48px]">
+                            {/* Staff Member 1 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/sadiq-isu.png" alt="Sadiq Isu" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Sadiq Isu</h3>
+                                    <p className="">Founder</p>
+                                </div>
+                            </div>
+
+                            {/* Staff Member 2 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/abdul-isu.png" alt="Abdul Isu" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Abdul Isu</h3>
+                                    <p className="">Co-Founder</p>
+                                </div>
+                            </div>
+
+                            {/* Staff Member 3 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/michael-nwoseh.png" alt="Michael Nwoseh" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Michael Nwoseh</h3>
+                                    <p className="">Business Director</p>
+                                </div>
+                            </div>
+
+                            {/* Staff Member 4 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/thompson-opurum.png" alt="Thompson Opurum" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Procurement Manager</h3>
+                                    <p className="">Co-Founder</p>
+                                </div>
+                            </div>
 
 
-<section className="w-full  relative pt-0 py-0  bg-[#FFFFFF]">
+                            {/* Staff Member 1 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/gina-isu.png" alt="Gina Isu" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Gina Isu</h3>
+                                    <p className="">Director of Marketing</p>
+                                </div>
+                            </div>
+
+                            {/* Staff Member 2 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/samuel-akingbade.png" alt="Samuel Akingbade" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Samuel Akingbade</h3>
+                                    <p className="">Head of Marketing</p>
+                                </div>
+                            </div>
+
+                            
+
+                            {/* Staff Member 3 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/haolat-ogbomo.png" alt="Haolat Ogbomo" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Haolat Ogbomo</h3>
+                                    <p className="">Human Resource</p>
+                                </div>
+                            </div>
+
+                            {/* Staff Member 4 */}
+                            <div className="staff-member flex flex-row items-center bg-white px-[27px] py-[18px] rounded-[18px] space-x-[36px]">
+                                <img src="/image/pages/staff/akwaowo-willie.png" alt="Akwaowo Willie" className="w-24 h-24 rounded-full "/>
+                                <div className="details text-[#333]">
+                                    <h3 className="text-lg font-semibold mb-2">Akwaowo Willie</h3>
+                                    <p className="">Logistics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </motion.section>
+      </div>
+
+      <section className="w-full  relative pt-0 py-0  bg-[#FFFFFF]">
 
   <div className="relative">
       {/* Absolute Image on the left */}
@@ -213,10 +274,30 @@ export default function AboutUs() {
              </section>
 </section>
 
-        <section className="bg-[#4D0374]">
-          <SubFooter/>
-        </section>
-      <Footer/>
+
+      {/* Sub Footer Section */}
+      <div>
+        <motion.section
+          className="bg-[#4D0374]"
+          animate={controls}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+        >
+          <SubFooter />
+        </motion.section>
+      </div>
+
+      {/* Footer Section */}
+      <div>
+        <motion.section
+          animate={controls}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+        >
+          <Footer />
+        </motion.section>
+      </div>
     </main>
-  )
+  );
 }
+

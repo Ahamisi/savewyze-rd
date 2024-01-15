@@ -1,34 +1,70 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
+import Link from 'next/link';
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+
 
 const Footer = () => {
+    const controls = useAnimation();
+    const footerRef = useRef();
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+    });
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start({ opacity: 1, y: 0 });
+      } else {
+        controls.start({ opacity: 0, y: 50 });
+      }
+    }, [inView, controls]);
+  
+  
   return (
-    <footer className="main-footer bg-[#F2E6F9] text-[#121212] py-[70px] pb-[140px] px-8">
-    <div className="container mx-auto">
-        
+    <motion.footer
+    ref={(node) => {
+      ref(node);
+      footerRef.current = node;
+    }}
+    initial={{ opacity: 0, y: 50 }}
+    animate={controls}
+    transition={{ duration: 1, ease: 'easeInOut' }}
+    className="main-footer bg-[#F2E6F9] text-[#121212] py-[70px] pb-[140px] px-8"
+  >
+
+      <div className="container mx-auto">
         {/* First Row */}
-        <div className="flex flex-wrap mb-8 pb-[60px]">
-
-            {/* First Column (Spanning 2 columns) */}
-            <div className="w-full md:w-full lg:w-2/6 mb-4 md:mb-0 space-y-[16px] pb-[30px] lg:pb-0">
-                <div>
-                    <img src="/image/savewyze-colored.svg"/>
-                </div>
-                <ul>
-                    <p>© 2024 Savewyse |  All Rights Reserved.</p>
-
-                </ul>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={controls}
+          transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+          className="flex flex-wrap mb-8 pb-[60px]"
+        >
+          {/* First Column (Spanning 2 columns) */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={controls}
+            transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+            className="w-full md:w-full lg:w-2/6 mb-4 md:mb-0 space-y-[16px] pb-[30px] lg:pb-0"
+          >
+            <div>
+              <img src="/image/savewyze-colored.svg" />
             </div>
+            <ul>
+              <p>© 2024 Savewyse | All Rights Reserved.</p>
+            </ul>
+          </motion.div>
 
-            {/* Columns 2-5 */}
-            <div className="w-1/2 md:w-1/4 lg:w-1/6 mb-8 md:mb-0 pr-8">
+                {/* Columns 2-5 */}
+             <div className="w-1/2 md:w-1/4 lg:w-1/6 mb-8 md:mb-0 pr-8">
                 <h5 className="text-lg font-semibold mb-[23px]">Features</h5>
                 <ul className="space-y-[24px]">
                     <li><Link href="/saving-plans/wyze-vault" className="text-[#121212] hover:text-[#8005C2]">Wyze Vault</Link></li>
                     <li><Link href="/saving-plans/wyze-target" className="text-[#121212] hover:text-[#8005C2]">Wyze Target</Link></li>
                     <li><Link href="/saving-plans/wyze-lock" className="text-[#121212] hover:text-[#8005C2]">Wyze Lock</Link></li>
 
-                    {/* Add more sublinks as needed */}
                 </ul>
             </div>
 
@@ -135,14 +171,23 @@ const Footer = () => {
                 </ul>
             </div>
 
-        </div>
-
+             
+        </motion.div>
 
         {/* Second Row */}
-        <div className="flex flex-wrap border-t-2 border-t-[#D8B2EC] lg:pt-[60px] pt-[30px]">
-
-            {/* First Column in the Second Row (Spanning 1 column width) */}
-            <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 flex">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={controls}
+          transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+          className="flex flex-wrap border-t-2 border-t-[#D8B2EC] lg:pt-[60px] pt-[30px]"
+        >
+          {/* First Column in the Second Row (Spanning 1 column width) */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={controls}
+            transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+            className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 flex"
+          >
                 
                 {/* Link Column 1 */}
                 <div className="mb-4 w-1/2">
@@ -164,15 +209,16 @@ const Footer = () => {
                     </ul>
                 </div>
 
-            </div>
+          </motion.div>
 
-            {/* Second Column in the Second Row (Spanning 1 column width) */}
-            <div className="w-full md:w-1/2 flex justify-between">
+          {/* Second Column in the Second Row (Spanning 1 column width) */}
+          {/* Second Column in the Second Row (Spanning 1 column width) */}
+          <div className="w-full md:w-1/2 flex justify-between">
 
                 {/* First Sub-column */}
                 <div className="hidden md:flex w-0 md:w-1/4"></div> {/* Empty Column */}
-                
-               {/* Second Sub-column */}
+
+                {/* Second Sub-column */}
                 <div className="w-full md:w-3/4">
                     {/* Newsletter Subscribe Form */}
                     <div className="flex items-center border-b border-[#121212] mb-4 pb-2">
@@ -195,15 +241,11 @@ const Footer = () => {
                 </div>
 
 
-            </div>
+                </div>
+        </motion.div>
+      </div>
+    </motion.footer>
+  );
+};
 
-        </div>
-
-
-    </div>
-</footer>
-
-  )
-}
-
-export default Footer
+export default Footer;
