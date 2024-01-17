@@ -24,7 +24,7 @@ const AnimatedContent = ({ title, description, imageSrc, delay }) => {
 
   return (
     <motion.div
-      className="column-item relative flex flex-col items-center justify-end h-auto md:h-[480px] w-2/3 md:w-1/2 lg:w-1/3  mb-[100px] md:mb-0"
+      className="column-item relative flex flex-col items-center justify-end h-auto md:h-[480px] w-2/3 md:w-1/2 lg:w-1/3  mb-[50px] md:mb-0"
       variants={fadeIn}
       initial="hidden"
       animate={controls}
@@ -98,7 +98,7 @@ const MainFeatures = () => {
           alt="Bottom Center Image" 
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 object-cover"
         />
-        <div className="absolute top-0 left-0 transform  object-cover bg-[#1A7A7F] h-[100px] w-[40%] rounded-[84px] rotate-[1deg]"></div>
+        <div className="hidden md:flex absolute top-0 left-0 transform  object-cover bg-[#1A7A7F] h-[100px] w-[40%] rounded-[84px] rotate-[1deg]"></div>
         <img 
           src="/image/pounds-circle.svg" 
           alt="Bottom Center Image" 

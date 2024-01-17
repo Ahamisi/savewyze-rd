@@ -48,7 +48,7 @@ const FeatureSection = () => {
         variants={stagger}
       >
         <motion.div
-          className="feature-item relative flex flex-col md:flex-row items-center justify-between rounded-[30px] overflow-hidden mb-8 md:mb-12 border-[1px] border-[#D8B2EC] p-[50px] mx-5"
+          className="feature-item relative flex flex-col md:flex-row items-center justify-between rounded-[30px] overflow-hidden mb-8 md:mb-12 border-[1px] border-[#D8B2EC] py-[30px] px-[20px] md:px-[50px] md:py-[50px] mx-5"
           variants={fadeIn}
         >
           {/* Background Image with Opacity Overlay */}
@@ -97,7 +97,7 @@ const FeatureSection = () => {
         variants={stagger}
       >
         <motion.div
-          className="feature-item relative flex flex-col md:flex-row items-center justify-between rounded-[30px] overflow-hidden mb-8 md:mb-12 border-[1px] border-[#D8B2EC] p-[50px] mx-5 md:mt-[-50px]"
+          className="feature-item relative flex flex-col md:flex-row items-center justify-between rounded-[30px] overflow-hidden mb-8 md:mb-12 border-[1px] border-[#D8B2EC] py-[30px] px-[20px] md:px-[50px] md:py-[50px] mx-5 md:mt-[-50px]"
           variants={fadeIn}
         >
           {/* Background Image with Opacity Overlay */}

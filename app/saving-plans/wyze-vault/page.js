@@ -23,7 +23,7 @@ export default function WyzeLock() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col md:flex-row mt-[70px] lg:mt-0 items-center" >
         {/* Content Wrapper */}    
         <div className="w-full md:w-6/10 order-2 md:order-1">
-            <img src="/image/handlock-savings.png"/>
+            <img src="/image/handlock-savings.png" class="mt-[45px] md:mt-0"/>
             {/* Add your content here */}
             
         </div>

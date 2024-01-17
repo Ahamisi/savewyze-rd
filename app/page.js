@@ -16,13 +16,13 @@ export default function Home() {
       {/* Header */}
      
       
-      <section className="relative w-full h-[600px] md:h-[800px] bg-cover bg-center" style={{ backgroundImage: "url('/image/frame-pattern.svg')" }}>
+      <section className="relative w-full h-full md:h-[800px] bg-cover bg-center" style={{ backgroundImage: "url('/image/frame-pattern.svg')" }}>
     <div>
         <Header />
     </div>
     <HeroSection/>
     {/* Background Overlay with Skew */}
-    <div className="relative left-0 w-full transform skew-y-6 rounded-tl-[84px] h-[600px] lg:h-[256%] z-20 mt-[-90px] lg:mt-[-170px]  bg-[#F9F9F9]"></div>
+    <div className="relative left-0 w-full transform skew-y-6 rounded-tl-[84px] h-0 lg:h-[256%] z-20 mt-[-90px] lg:mt-[-170px]  bg-[#F9F9F9]"></div>
 
 </section>
 

@@ -53,15 +53,15 @@ const TestimonyInside = () => {
         <section className="testimonialSection py-16 bg-[#3A0257] text-white rounded-[54px]" >
             <div className="container mx-auto flex flex-col md:flex-row px-[48px] space-y-[48px]">
                 {/* Testifier Cards Column */}
-                <div className="w-full md:w-1/3 flex flex-col items-center space-y-4 md:space-y-8 py-8 md:py-16">
+                <div className="w-full md:w-1/3 flex flex-row md:flex-col space-x-2 md:space-x-0 items-center space-y-4 md:space-y-8 py-8 md:py-16">
                     {testimonies.map((testimony, index) => (
                         <div
                             key={testimony.id}
-                            className={`cursor-pointer ${selectedTestimony.id === testimony.id ? 'testifier-card active bg-white border-left border-left-[#D8B2EC] rounded-[18px] py-[18px] px-[27px] flex items-center space-x-[36px] border-l-[4px] border-l-[#D8B2EC] w-full' : 'testifier-card active bg-[#600492] border-left border-left-[#D8B2EC] rounded-[18px] py-[18px] px-[27px] flex items-center space-x-[36px] w-full'}`}
+                            className={`cursor-pointer ${selectedTestimony.id === testimony.id ? 'testifier-card active bg-white border-left border-left-[#D8B2EC] rounded-[18px] py-[8px] px-[8px]  md:py-[18px] md:px-[27px] flex items-center space-x-[36px] border-l-[4px] border-l-[#D8B2EC] w-full' : 'testifier-card active bg-[#600492] border-left border-left-[#D8B2EC] rounded-[18px] py-[8px] px-[8px]  md:py-[18px] md:px-[27px]  flex items-center space-x-[36px] w-full mt-[18px] md:mt-0'}`}
                             onClick={() => handleTestifierClick(testimony)}
                         >
                             <img src={`/image/${testimony.name.toLowerCase().replace(' ', '-')}.png`} alt="Testifier Avatar" className="w-16 h-16 rounded-full" />
-                            <div className={`${selectedTestimony.id === testimony.id ? 'text-[#333333]' : 'text-[#F2E6F9]' } text-left`}>
+                            <div className={`${selectedTestimony.id === testimony.id ? 'text-[#333333]' : 'text-[#F2E6F9]' } hidden md:flex md:flex-col text-left`}>
                                 <h4 className="text-lg font-semibold">{testimony.name}</h4>
                                 <p className="text-sm">{testimony.delegation}</p>
                             </div>
@@ -70,7 +70,7 @@ const TestimonyInside = () => {
                 </div>
 
                 {/* Dot Navigation */}
-                <div className="flex justify-center gap-[10px] mt-8 md:mt-0 flex-col items-center m-0 space-x-[10px] mx-[24px]">
+                <div className="flex flex-row justify-center md:gap-[10px] mt-2 md:mt-0 md:flex-col items-center m-0 space-x-[10px] mx-[24px]">
                     {testimonies.map((testimony, index) => (
                         <button
                             key={index}
@@ -81,7 +81,7 @@ const TestimonyInside = () => {
                 </div>
 
                 {/* Testimony Display Column */}
-                <div className="w-full md:w-2/3 px-4 md:px-8 py-8 md:py-16 text-white bg-[#600492] rounded-[24px] text-left flex flex-col space-y-[30px] ml-[12px]" id="testimony-body" ref={sliderRef}>
+                <div className="w-full md:w-2/3 px-4 md:px-8 py-8 md:py-16 text-white bg-[#600492] rounded-[24px] text-left flex flex-col space-y-1 md:pace-y-[30px] md:ml-[12px] mt-0" id="testimony-body" ref={sliderRef}>
                     <h2 className="text-3xl font-semibold mb-8">{selectedTestimony.name}'s Testimonial</h2>
                     <p className="text-lg mb-4">
                         {selectedTestimony.testimony}

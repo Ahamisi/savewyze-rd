@@ -227,10 +227,10 @@ export default function AboutUs() {
 
 
 <section className="w-full overflow-x-hidden bg-[#fff]" style={{ backgroundImage: "url('/image/group-skey.svg')" }}>
-              <div className="skewed-div" ></div>
+              <div className="skewed-div hidden md:flex" ></div>
 
  {/* Faint Image Below the Main Row */}
-            <div className="text-center mt-[-230px]">
+            <div className="text-center md:mt-[-230px]">
               <img src="/image/pages/savewyze-text.svg" alt="Faint Image" className="mx-auto" />
             </div>
               <style jsx>{`

@@ -114,7 +114,7 @@ const SavingPlans = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
       >
-        <div className="text-left mb-8">
+        <div className="text-left mb-8 pl-4 md:pl-0">
           <h2 className="text-2xl font-semibold text-[#555] text-[50px] leading-[50px]">
             Enjoy different savings <br />plans that suit your goal.
           </h2>

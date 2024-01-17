@@ -40,13 +40,13 @@ const GetStartedSteps = () => {
           {/* Content Wrapper */}
           <div className="z-10 w-full md:w-1/2 p-2 md:p-8  md:text-left">
             <motion.h3
-              className="text-3xl font-semibold mb-4 text-black lg:text-[50px] lg:leading-[50px]"
+              className="text-3xl font-semibold mb-4 text-black lg:text-[50px] lg:leading-[50px] text-center md:text-left"
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
             >
               Get started on <br /> Savewyze in <br />3 simple steps
             </motion.h3>
-            <div className="absolute left-0 lg:left-[60px] pt-[24px] bottom-0">
+            <div className="hidden md:flex absolute left-0 lg:left-[60px] pt-[24px] bottom-0">
               <img src="/image/mobile-mockup.png" className="h-[380px]" />
             </div>
           </div>
