@@ -1,5 +1,6 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
+import TestimonyInside from './TestimonyInside';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -7,6 +8,7 @@ const AsMentioned = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
+    delay: 5000,
   });
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const AsMentioned = () => {
             className="md:absolute inset-0 flex items-center justify-center bg-[#F4F4F4] rounded-[54px] h-full mt-[18px] mx-auto w-[98%]"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut', delay: 0.5 }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
           ></motion.div>
 
           {/* Top Layer */}
@@ -53,7 +55,7 @@ const AsMentioned = () => {
             className="md:absolute flex items-center justify-center flex-col space-y-[26px] inset-0 bg-[#FFF] rounded-[54px] p-10 md:p-0"
             initial={{ opacity: 0, y: -150 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut', delay: 1 }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
           >
             <div className="text-[#8005C2] text-4xl">
               <h4>As Mentioned On</h4>
@@ -79,7 +81,6 @@ const AsMentioned = () => {
             </div>
           </motion.div>
         </motion.div>
-
         {/* Testimonial Row Goes Here */}
       </div>
     </motion.section>

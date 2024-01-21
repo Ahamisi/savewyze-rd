@@ -14,6 +14,11 @@ const HeroSection = () => {
     visible: { opacity: 1 },
   };
 
+  const imageAnimationVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, },
+  };
+
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-auto md:h-[780px] flex pt-8 flex-col md:flex-row">
       {/* Content Wrapper */}
@@ -41,7 +46,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInVariants}
-            transition={{ duration: 1, delay: 0.5 }} // Add a delay if needed
+            transition={{ duration: 1, delay: 0.5 }}
           >
             Save. Earn. Grow.
           </motion.p>
@@ -55,8 +60,15 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="hidden lg:flex absolute right-0 bottom-0 ml-auto w-[70%] transform skew-y-[16.5deg] rounded-l-[84px] bg-[#D8B2EC] h-[160px]"></div>
+
       </motion.div>
+      <motion.div
+          className="hidden lg:flex absolute right-0 ml-auto w-[40%] bottom-[-26px] bg-[#D8B2EC] h-[122px] rounded-tl-[84px] rotate-[15deg]"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 15 }}
+          variants={imageAnimationVariants}
+          transition={{ duration: 1, delay: 0.7 }}
+        ></motion.div>
     </div>
   );
 };

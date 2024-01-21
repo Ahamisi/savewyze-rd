@@ -1,15 +1,34 @@
 "use client"
 import React from 'react';
 import TestimonyInside from './TestimonyInside';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import AsMentioned from './AsMentioned';
+import { useInView } from 'react-intersection-observer';
 
 const TestimonialSection = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  if (inView) {
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: 'easeInOut',
+        delay: 0.5,
+      },
+    });
+  }
+
   return (
     <motion.section
-      className="testimonialSection lg:py-16 relative lg:py-[150px] lg:pb-0 mt-[220px]"
+      ref={ref}
+      className="testimonialSection lg:py-16 relative lg:pb-0 mt-[220px]"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={controls}
       transition={{ duration: 1, ease: 'easeInOut' }}
     >
       <div className="container mx-auto text-center relative z-10">
@@ -21,10 +40,9 @@ const TestimonialSection = () => {
           <TestimonyInside />
         </div>
 
-        <AsMentioned/>
-        
+        {/* <AsMentioned/> */}
       </div>
-      <div className="py-0 w-11/12 md:w-4/5 lg:w-3/5 mx-auto mt-16 absolute top-[-20%] left-[15%] -z-1">
+      <div className="py-0 w-11/12 md:w-4/5 lg:w-3/5 mx-auto mt-16 absolute top-[-30%] left-[15%] -z-1">
         <div>
           <img src="/image/savewyze-word.svg" alt="Savewyze Word" />
         </div>

@@ -9,6 +9,7 @@ const FeatureSection = () => {
     visible: { opacity: 1 },
   };
 
+
   const stagger = {
     visible: {
       opacity: 1,

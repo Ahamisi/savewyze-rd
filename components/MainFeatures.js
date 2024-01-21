@@ -31,7 +31,7 @@ const AnimatedContent = ({ title, description, imageSrc, delay }) => {
       ref={ref}
     >
       <div className="absolute h-full z-2 bg-[#145B5F] rounded-[32px] top-[20px] w-[305px]"></div>
-      <div className="absolute h-full z-10 rounded-[32px]  bg-[#1A7A7F] top-[10px] w-[335px] "></div>
+      {/* <div className="absolute h-full z-10 rounded-[32px]  bg-[#1A7A7F] top-[10px] w-[335px] "></div> */}
       <div className="relative z-20 flex flex-col items-left justify-between w-[358px] h-full rounded-[32px] bg-[#EAFAFB] pt-[50px]">
         <div className="px-[55px] mt-[45px]">
           <h3 className="text-2xl lg:text-[20px] font-semibold mb-2 text-[#121212]">{title}</h3>
@@ -47,8 +47,8 @@ const AnimatedContent = ({ title, description, imageSrc, delay }) => {
 
 const MainFeatures = () => {
   return (
-    <div className="w-full py-16 md:py-24 bg-[#21989E] h-full lg:mt-[100px]">
-      <div className="w-full mb-16 lg:pt-[180px] md:mb-24">
+    <div className="w-full py-16 md:py-16 bg-[#21989E] h-full lg:mt-[100px]">
+      <div className="w-full mb-16 lg:pt-[10px] xl:pt-[80px]  md:mb-24">
         <motion.h2
           className="text-3xl lg:text-[50px] lg:leading-[50px] font-semibold text-center font-BROmny"
           variants={{ visible: { opacity: 1, y: 0 } }}
@@ -98,7 +98,7 @@ const MainFeatures = () => {
           alt="Bottom Center Image" 
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40 object-cover"
         />
-        <div className="hidden md:flex absolute top-0 left-0 transform  object-cover bg-[#1A7A7F] h-[100px] w-[40%] rounded-[84px] rotate-[1deg]"></div>
+        <div className="hidden absolute top-0 left-0 transform  object-cover bg-[#1A7A7F] h-[100px] w-[40%] rounded-[84px] rotate-[1deg]"></div>
         <img 
           src="/image/pounds-circle.svg" 
           alt="Bottom Center Image" 

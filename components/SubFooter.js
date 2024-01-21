@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import AsMentioned from './AsMentioned';
 
 const SubFooter = () => {
   const [ref, inView] = useInView({
@@ -10,6 +11,7 @@ const SubFooter = () => {
 
   return (
     <div ref={ref}>
+      <AsMentioned/>
       <motion.div
         className="sub-footer bg-[#4D0374] text-white py-10 md:py-16 lg:py-20 w-11/12 md:w-10/12 lg:w-4/5 xl:w-[70%] mx-auto lg:mt-5"
         initial={{ opacity: 0, y: 50 }}
