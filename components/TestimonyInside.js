@@ -51,9 +51,9 @@ const TestimonyInside = () => {
 
     return (
         <section className="testimonialSection py-16 bg-[#3A0257] text-white rounded-[54px]" >
-            <div className="container mx-auto flex flex-col md:flex-row px-[48px] space-y-[48px]">
+            <div className="container mx-auto flex flex-col md:flex-row px-[20px] md:px-[48px] space-y-[8px]">
                 {/* Testifier Cards Column */}
-                <div className="w-full md:w-1/3 flex flex-row md:flex-col space-x-2 md:space-x-0 items-center space-y-4 md:space-y-8 py-8 md:py-16">
+                <div className="w-full md:w-1/3 flex flex-row md:flex-col space-x-2 md:space-x-0 items-center space-y-4 md:space-y-8 pt-8 md:py-16">
                     {testimonies.map((testimony, index) => (
                         <div
                             key={testimony.id}
@@ -70,7 +70,7 @@ const TestimonyInside = () => {
                 </div>
 
                 {/* Dot Navigation */}
-                <div className="flex flex-row justify-center md:gap-[10px] mt-2 md:mt-0 md:flex-col items-center m-0 space-x-[10px] mx-[24px]">
+                <div className="flex flex-row justify-center md:gap-[10px] md:mt-0 md:flex-col items-center m-0 space-x-[10px] mx-[24px]">
                     {testimonies.map((testimony, index) => (
                         <button
                             key={index}

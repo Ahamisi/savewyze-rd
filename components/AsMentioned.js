@@ -56,7 +56,7 @@ const AsMentioned = () => {
             transition={{ duration: 1.5, ease: 'easeInOut', delay: 1 }}
           >
             <div className="text-[#8005C2] text-4xl">
-              <h4>As Mentioned On</h4>
+              <h4 className='text-xl md:text-4xl'>As Mentioned On</h4>
             </div>
             <div className="flex items-center justify-center">
               {/* Logos go here */}

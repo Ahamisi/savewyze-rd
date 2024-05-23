@@ -43,7 +43,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
-          className="flex flex-wrap mb-8 pb-[60px]"
+          className="flex flex-wrap mb-8 pb-[60px] text-sm md:text-base"
         >
         
             {/* First Row */}
@@ -183,7 +183,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
           transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
-          className="flex flex-wrap border-t-2 border-t-[#D8B2EC] lg:pt-[60px] pt-[30px]"
+          className="flex flex-wrap border-t-2 border-t-[#D8B2EC] lg:pt-[60px] pt-[30px] text-sm md:text-base"
         >
 
                 {/* Second Row */}

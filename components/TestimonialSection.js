@@ -32,7 +32,7 @@ const TestimonialSection = () => {
       transition={{ duration: 1, ease: 'easeInOut' }}
     >
       <div className="container mx-auto text-center relative z-10">
-        <h2 className="text-3xl font-semibold mb-8 lg:text-[50px] lg:leading-[50px]">
+        <h2 className="text-3xl font-semibold mb-8 lg:text-[50px] lg:leading-[50px] text-white">
           What other Savewyzers<br /> are saying about us!
         </h2>
 
