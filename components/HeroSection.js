@@ -53,10 +53,10 @@ const HeroSection = () => {
           {/* Download Buttons */}
           <div className="space-x-[19px]">
             <button className="text-white px-0 py-3 rounded-ful transition duration-300">
-              <img src='/image/appstore-badge.png' alt="App Store Badge" className="h-[32px] md:h-[52px" />
+              <img src='/image/appstore-badge.png' alt="App Store Badge" className="h-[32px] md:h-[52px]" />
             </button>
             <button className="text-white px-0 py-3 rounded-ful transition duration-300">
-              <img src='/image/playstore-badge.png' alt="Play Store Badge" className="h-[32px] md:h-[52px" />
+              <img src='/image/playstore-badge.png' alt="Play Store Badge" className="h-[32px] md:h-[52px]" />
             </button>
           </div>
         </div>
