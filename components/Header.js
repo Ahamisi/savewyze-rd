@@ -145,7 +145,7 @@ const Header = ({ mode = "dark" }) => {
 
                     {/* Buttons */}
                     <div className="hidden lg:flex space-x-4 items-center">
-                        <Link className={`${mode == 'light' ? 'text-[#8005C2]' : 'text-white'} px-4 py-2  transition duration-300 cursor-pointer font-extrabold`} href="#">SIGN UP</Link>
+                        <Link className={`${mode == 'light' ? 'text-[#8005C2]' : 'text-white'} px-4 py-2  transition duration-300 cursor-pointer font-extrabold`} href="https://savewyzeapp.netlify.app">SIGN IN</Link>
                         <button className={`${mode == 'light' ? 'bg-[#8005C2] text-white hover:border-[1px] hover:border-[#4D0374] hover:bg-white hover:text-[#4D0374]' : 'bg-white text-[#8005C2] hover:bg-[#4D0374] hover:text-white'} rounded-[36px] py-[20px] px-[40px] transition duration-300`}>Download App</button>
                     </div>
                 </div>
